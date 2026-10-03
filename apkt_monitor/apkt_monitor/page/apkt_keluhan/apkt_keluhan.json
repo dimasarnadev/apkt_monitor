@@ -1,0 +1,9 @@
+{
+ "doctype": "Page",
+ "name": "apkt-keluhan",
+ "page_name": "apkt-keluhan",
+ "title": "Keluhan APKT",
+ "module": "APKT Monitor",
+ "standard": "Yes",
+ "roles": [{"role": "System Manager"}, {"role": "APKT Operator"}]
+}

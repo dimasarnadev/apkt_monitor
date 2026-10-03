@@ -1,0 +1,76 @@
+{
+ "doctype": "DocType",
+ "name": "WAHA Account",
+ "module": "APKT Monitor",
+ "custom": 0,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Nama",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Aktif",
+   "default": "1"
+  },
+  {
+   "fieldname": "waha_url",
+   "fieldtype": "Data",
+   "label": "WAHA URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "label": "API Key"
+  },
+  {
+   "fieldname": "session_name",
+   "fieldtype": "Data",
+   "label": "Session",
+   "default": "default",
+   "reqd": 1
+  },
+  {
+   "fieldname": "typing_simulation",
+   "fieldtype": "Check",
+   "label": "Simulasi Mengetik",
+   "default": "1"
+  }
+ ],
+ "field_order": [
+  "title",
+  "enabled",
+  "waha_url",
+  "api_key",
+  "session_name",
+  "typing_simulation"
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "creation": "2026-10-03 00:00:00",
+ "modified": "2026-10-03 00:00:00",
+ "owner": "Administrator",
+ "modified_by": "Administrator",
+ "links": [],
+ "states": [],
+ "autoname": "field:title",
+ "track_changes": 1
+}

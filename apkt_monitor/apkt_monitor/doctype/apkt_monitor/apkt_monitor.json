@@ -1,0 +1,105 @@
+{
+ "doctype": "DocType",
+ "name": "APKT Monitor",
+ "module": "APKT Monitor",
+ "custom": 0,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "poller",
+   "fieldtype": "Link",
+   "label": "Poller",
+   "options": "APKT Poller",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "no_laporan",
+   "fieldtype": "Data",
+   "label": "No Laporan",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "status_terakhir",
+   "fieldtype": "Data",
+   "label": "Status Terakhir",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "is_final",
+   "fieldtype": "Check",
+   "label": "Final"
+  },
+  {
+   "fieldname": "status_changed_at",
+   "fieldtype": "Datetime",
+   "label": "Status Berubah"
+  },
+  {
+   "fieldname": "first_seen_at",
+   "fieldtype": "Datetime",
+   "label": "Pertama Terlihat"
+  },
+  {
+   "fieldname": "last_seen_at",
+   "fieldtype": "Datetime",
+   "label": "Terakhir Terlihat"
+  },
+  {
+   "fieldname": "new_notified_at",
+   "fieldtype": "Datetime",
+   "label": "Notif Baru Terkirim"
+  },
+  {
+   "fieldname": "last_reminder_at",
+   "fieldtype": "Datetime",
+   "label": "Reminder Terakhir"
+  },
+  {
+   "fieldname": "history",
+   "fieldtype": "Table",
+   "label": "Histori Status",
+   "options": "APKT Monitor History"
+  }
+ ],
+ "field_order": [
+  "poller",
+  "no_laporan",
+  "status_terakhir",
+  "is_final",
+  "status_changed_at",
+  "first_seen_at",
+  "last_seen_at",
+  "new_notified_at",
+  "last_reminder_at",
+  "history"
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "APKT Operator",
+   "read": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "creation": "2026-10-03 00:00:00",
+ "modified": "2026-10-03 00:00:00",
+ "owner": "Administrator",
+ "modified_by": "Administrator",
+ "links": [],
+ "states": []
+}

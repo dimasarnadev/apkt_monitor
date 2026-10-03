@@ -1,0 +1,76 @@
+{
+ "doctype": "DocType",
+ "name": "APKT Settings",
+ "module": "APKT Monitor",
+ "custom": 0,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "graphql_keluhan_url",
+   "fieldtype": "Data",
+   "label": "GraphQL Keluhan URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "auth_base_url",
+   "fieldtype": "Data",
+   "label": "Auth Base URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "request_timeout",
+   "fieldtype": "Int",
+   "label": "Request Timeout (detik)",
+   "default": "15"
+  },
+  {
+   "fieldname": "timezone",
+   "fieldtype": "Data",
+   "label": "Timezone",
+   "default": "Asia/Jakarta"
+  },
+  {
+   "fieldname": "cache_seconds",
+   "fieldtype": "Int",
+   "label": "Cache Hasil Poll (detik)",
+   "default": "50",
+   "description": "Hasil poll dipakai bersama oleh poller dan frontend selama durasi ini."
+  },
+  {
+   "fieldname": "final_statuses",
+   "fieldtype": "Small Text",
+   "label": "Status Final",
+   "default": "Batal\nSelesai",
+   "description": "Satu status per baris. Tidak ada reminder untuk status ini."
+  }
+ ],
+ "field_order": [
+  "graphql_keluhan_url",
+  "auth_base_url",
+  "request_timeout",
+  "timezone",
+  "cache_seconds",
+  "final_statuses"
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "creation": "2026-10-03 00:00:00",
+ "modified": "2026-10-03 00:00:00",
+ "owner": "Administrator",
+ "modified_by": "Administrator",
+ "links": [],
+ "states": [],
+ "issingle": 1
+}

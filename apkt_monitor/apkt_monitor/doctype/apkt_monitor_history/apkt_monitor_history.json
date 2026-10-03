@@ -1,0 +1,53 @@
+{
+ "doctype": "DocType",
+ "name": "APKT Monitor History",
+ "module": "APKT Monitor",
+ "custom": 0,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "status_lama",
+   "fieldtype": "Data",
+   "label": "Status Lama",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status_baru",
+   "fieldtype": "Data",
+   "label": "Status Baru",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "changed_at",
+   "fieldtype": "Datetime",
+   "label": "Waktu",
+   "in_list_view": 1
+  }
+ ],
+ "field_order": [
+  "status_lama",
+  "status_baru",
+  "changed_at"
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "creation": "2026-10-03 00:00:00",
+ "modified": "2026-10-03 00:00:00",
+ "owner": "Administrator",
+ "modified_by": "Administrator",
+ "links": [],
+ "states": [],
+ "istable": 1
+}

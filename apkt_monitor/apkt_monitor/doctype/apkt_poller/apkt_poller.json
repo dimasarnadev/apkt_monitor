@@ -1,0 +1,192 @@
+{
+ "doctype": "DocType",
+ "name": "APKT Poller",
+ "module": "APKT Monitor",
+ "custom": 0,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Nama",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Aktif",
+   "default": "1"
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "APKT Account",
+   "options": "APKT Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "interval_minutes",
+   "fieldtype": "Int",
+   "label": "Interval (menit)",
+   "default": "1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_window_days",
+   "fieldtype": "Int",
+   "label": "Jendela Hari ke Belakang",
+   "default": "1",
+   "description": "1 = hari ini dan kemarin. Tanggal dihitung dengan timezone di APKT Settings."
+  },
+  {
+   "fieldname": "page_size",
+   "fieldtype": "Int",
+   "label": "Ukuran Halaman",
+   "default": "100"
+  },
+  {
+   "fieldname": "reminder_minutes",
+   "fieldtype": "Int",
+   "label": "Reminder Bila Status Sama (menit)",
+   "default": "15"
+  },
+  {
+   "fieldname": "silent_first_run",
+   "fieldtype": "Check",
+   "label": "Polling Pertama Tanpa Notifikasi",
+   "default": "1"
+  },
+  {
+   "fieldname": "section_query",
+   "fieldtype": "Section Break",
+   "label": "Request GraphQL"
+  },
+  {
+   "fieldname": "query",
+   "fieldtype": "Code",
+   "label": "Query",
+   "options": "GraphQL"
+  },
+  {
+   "fieldname": "variables",
+   "fieldtype": "Code",
+   "label": "Variables (template Jinja)",
+   "options": "JSON",
+   "description": "Variabel: date_from, date_to, today, yesterday, skip, take, account.(user_id,id_uid,id_up3,id_ulp)"
+  },
+  {
+   "fieldname": "section_map",
+   "fieldtype": "Section Break",
+   "label": "Pemetaan Hasil"
+  },
+  {
+   "fieldname": "result_path",
+   "fieldtype": "Data",
+   "label": "Result Path",
+   "default": "data.getMonitoringKeluhanAll"
+  },
+  {
+   "fieldname": "key_field",
+   "fieldtype": "Data",
+   "label": "Field Nomor Laporan",
+   "default": "no_laporan"
+  },
+  {
+   "fieldname": "status_field",
+   "fieldtype": "Data",
+   "label": "Field Status",
+   "default": "status_akhir"
+  },
+  {
+   "fieldname": "section_targets",
+   "fieldtype": "Section Break",
+   "label": "Notifikasi WhatsApp"
+  },
+  {
+   "fieldname": "targets",
+   "fieldtype": "Table",
+   "label": "Target",
+   "options": "APKT Poller Target"
+  },
+  {
+   "fieldname": "section_state",
+   "fieldtype": "Section Break",
+   "label": "Status Poller"
+  },
+  {
+   "fieldname": "last_run",
+   "fieldtype": "Datetime",
+   "label": "Terakhir Berjalan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_status",
+   "fieldtype": "Data",
+   "label": "Status Terakhir",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_count",
+   "fieldtype": "Int",
+   "label": "Jumlah Data Terakhir",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_error",
+   "fieldtype": "Small Text",
+   "label": "Error Terakhir",
+   "read_only": 1
+  }
+ ],
+ "field_order": [
+  "title",
+  "enabled",
+  "account",
+  "interval_minutes",
+  "date_window_days",
+  "page_size",
+  "reminder_minutes",
+  "silent_first_run",
+  "section_query",
+  "query",
+  "variables",
+  "section_map",
+  "result_path",
+  "key_field",
+  "status_field",
+  "section_targets",
+  "targets",
+  "section_state",
+  "last_run",
+  "last_status",
+  "last_count",
+  "last_error"
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  },
+  {
+   "role": "APKT Operator",
+   "read": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "creation": "2026-10-03 00:00:00",
+ "modified": "2026-10-03 00:00:00",
+ "owner": "Administrator",
+ "modified_by": "Administrator",
+ "links": [],
+ "states": [],
+ "autoname": "field:title",
+ "track_changes": 1
+}

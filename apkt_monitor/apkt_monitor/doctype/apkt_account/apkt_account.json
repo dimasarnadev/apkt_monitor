@@ -1,0 +1,119 @@
+{
+ "doctype": "DocType",
+ "name": "APKT Account",
+ "module": "APKT Monitor",
+ "custom": 0,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Nama",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "username",
+   "fieldtype": "Data",
+   "label": "Username NIP",
+   "reqd": 1
+  },
+  {
+   "fieldname": "owner_user",
+   "fieldtype": "Link",
+   "label": "Pemilik",
+   "options": "User"
+  },
+  {
+   "fieldname": "token_status",
+   "fieldtype": "Select",
+   "label": "Status Token",
+   "options": "Belum Login\nAktif\nExpired",
+   "default": "Belum Login",
+   "read_only": 1
+  },
+  {
+   "fieldname": "token_updated_at",
+   "fieldtype": "Datetime",
+   "label": "Token Diperbarui",
+   "read_only": 1
+  },
+  {
+   "fieldname": "auth_token",
+   "fieldtype": "Password",
+   "label": "Token APKT",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_profile",
+   "fieldtype": "Section Break",
+   "label": "Profil APKT (diisi saat login)"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Nama Pegawai",
+   "read_only": 1
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Int",
+   "label": "User ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "id_uid",
+   "fieldtype": "Int",
+   "label": "ID UID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "id_up3",
+   "fieldtype": "Int",
+   "label": "ID UP3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "id_ulp",
+   "fieldtype": "Int",
+   "label": "ID ULP",
+   "read_only": 1
+  }
+ ],
+ "field_order": [
+  "title",
+  "username",
+  "owner_user",
+  "token_status",
+  "token_updated_at",
+  "auth_token",
+  "section_profile",
+  "employee_name",
+  "user_id",
+  "id_uid",
+  "id_up3",
+  "id_ulp"
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "creation": "2026-10-03 00:00:00",
+ "modified": "2026-10-03 00:00:00",
+ "owner": "Administrator",
+ "modified_by": "Administrator",
+ "links": [],
+ "states": [],
+ "autoname": "field:title",
+ "track_changes": 1
+}
